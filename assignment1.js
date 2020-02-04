@@ -77,6 +77,47 @@ function printBanner(string)
     console.log("*" + string + "*");
     console.log(topBot);
 }
+//Question 8
+function leetspeak(string)
+{
+    var array = string.split('');
+    for(var i = 0; i < array.length; i++)
+    {
+        switch(array[i])
+        {
+            case 'A':
+            case 'a':
+                array[i] = '4';
+                break;
+            case 'E':
+            case 'e':
+                array[i] = '3';
+                break;
+            case 'G':
+            case 'g':
+                array[i] = '6';
+                break;
+            case "I":
+            case 'i':
+                array[i] = '1';
+                break;
+            case "O":
+            case 'o':
+                array[i] = '0';
+                break;
+            case "S":
+            case 's':
+                array[i] = '5';
+                break;
+            case "T":
+            case 't':
+                array[i] = '7';
+                break;
+        }
+    }
+    var newString = array.join('');
+    return newString;
+}
 
 function main()
 {
@@ -90,7 +131,8 @@ function main()
     // printNumbers(9);
     // printSquare(10);
     // printBox(5, 8);
-    printBanner('This has a banner')
+    // printBanner('This has a banner')
+    console.log(leetspeak('leet'));
 }
 
 
