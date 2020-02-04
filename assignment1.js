@@ -124,21 +124,38 @@ function longLongVowels(string)
     var newString = ""
     for(var i = 0; i < string.length; i++)
     {
-        switch(string[i])
+        if(string[i] == string[i + 1])
         {
-            case 'a':
-            case 'A':
-            case 'e':
-            case 'E':
-            case 'i':
-            case 'I':
-            case 'o':
-            case 'O':
-            case 'u':
-            case 'U':
-                return newString = string.slice(0,i) + string[i] + string[i] + string[i] + string.slice(i)
+            switch(string[i])
+            {
+                case 'a':
+                case 'A':
+                case 'e':
+                case 'E':
+                case 'i':
+                case 'I':
+                case 'o':
+                case 'O':
+                case 'u':
+                case 'U':
+                    return newString = string.slice(0,i) + string[i] + string[i] + string[i] + string.slice(i)
+            }
         }
     }
+    return string;
+}
+//Question 10
+function positiveNumbers(ary)
+{
+    var newAry = [];
+    for(var i = 0; i < ary.length; i++)
+    {
+        if(ary[i] >= 0)
+        {
+            newAry.push(ary[i]);
+        }
+    }
+    return newAry;
 }
 
 function main()
@@ -155,7 +172,10 @@ function main()
     // printBox(5, 8);
     // printBanner('This has a banner')
     // console.log(leetspeak('leet'));
-    console.log(longLongVowels('Cheese'));
+    // console.log(longLongVowels('Cheese'));
+    // console.log(longLongVowels('Good'));
+    // console.log(longLongVowels('Man'));
+    console.log(positiveNumbers([1, -3, 5, -3, 0]));
 }
 
 
