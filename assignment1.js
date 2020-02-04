@@ -65,7 +65,18 @@ function printBox(num1, num2)
     }
     console.log(topBot);
 }
-
+//Question 7
+function printBanner(string)
+{
+    var topBot = "";
+    for(var i = 0; i < (string.length + 2); i++)
+    {
+        topBot += "*";
+    }
+    console.log(topBot);
+    console.log("*" + string + "*");
+    console.log(topBot);
+}
 
 function main()
 {
@@ -78,7 +89,8 @@ function main()
     // console.log("Your total with tip will cost " + totalAmount(75, 'bad'));
     // printNumbers(9);
     // printSquare(10);
-    printBox(5, 8);
+    // printBox(5, 8);
+    printBanner('This has a banner')
 }
 
 
