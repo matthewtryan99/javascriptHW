@@ -42,19 +42,43 @@ function printSquare(num)
         console.log(square);
     }
 }
+//Question 6
+function printBox(num1, num2)
+{
+    var topBot = "";
+    for(var i = 0; i < num1; i++)
+    {
+        topBot += "*";
+    }
+
+    var middle = "*";
+    for(var i = 0; i < (num1-2); i++)
+    {
+        middle += " ";
+    }
+    middle += "*";
+
+    console.log(topBot);
+    for(var i = 0; i < (num2 - 2); i++)
+    {
+        console.log(middle);
+    }
+    console.log(topBot);
+}
 
 
 function main()
 {
-    console.log(madlib('matt', 'math'));
-    console.log("if your service was good you should tip " + tipAmount(75, 'good'));
-    console.log("Your total with tip will cost " + totalAmount(75, 'good'));
-    console.log("if your service was fair you should tip " + tipAmount(75, 'fair'));
-    console.log("Your total with tip will cost " + totalAmount(75, 'fair'));
-    console.log("if your service was bad you should tip " + tipAmount(75, 'bad'));
-    console.log("Your total with tip will cost " + totalAmount(75, 'bad'));
-    printNumbers(9);
-    printSquare(10);
+    // console.log(madlib('matt', 'math'));
+    // console.log("if your service was good you should tip " + tipAmount(75, 'good'));
+    // console.log("Your total with tip will cost " + totalAmount(75, 'good'));
+    // console.log("if your service was fair you should tip " + tipAmount(75, 'fair'));
+    // console.log("Your total with tip will cost " + totalAmount(75, 'fair'));
+    // console.log("if your service was bad you should tip " + tipAmount(75, 'bad'));
+    // console.log("Your total with tip will cost " + totalAmount(75, 'bad'));
+    // printNumbers(9);
+    // printSquare(10);
+    printBox(5, 8);
 }
 
 
