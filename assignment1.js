@@ -118,6 +118,28 @@ function leetspeak(string)
     var newString = array.join('');
     return newString;
 }
+//Question 9
+function longLongVowels(string)
+{
+    var newString = ""
+    for(var i = 0; i < string.length; i++)
+    {
+        switch(string[i])
+        {
+            case 'a':
+            case 'A':
+            case 'e':
+            case 'E':
+            case 'i':
+            case 'I':
+            case 'o':
+            case 'O':
+            case 'u':
+            case 'U':
+                return newString = string.slice(0,i) + string[i] + string[i] + string[i] + string.slice(i)
+        }
+    }
+}
 
 function main()
 {
@@ -132,7 +154,8 @@ function main()
     // printSquare(10);
     // printBox(5, 8);
     // printBanner('This has a banner')
-    console.log(leetspeak('leet'));
+    // console.log(leetspeak('leet'));
+    console.log(longLongVowels('Cheese'));
 }
 
 
