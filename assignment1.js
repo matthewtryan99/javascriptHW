@@ -18,9 +18,18 @@ function tipAmount(amount, review)
     }
 }
 
+function totalAmount(amount, review)
+{
+    return tipAmount(amount, review) + amount;
+}
+
 function main()
 {
     console.log(madlib('matt', 'math'));
+    console.log("if your service was good you should tip " + tipAmount(75, 'good'));
+    console.log("if your service was fair you should tip " + tipAmount(75, 'fair'));
+    console.log("if your service was bad you should tip " + tipAmount(75, 'bad'));
 }
+
 
 main();
