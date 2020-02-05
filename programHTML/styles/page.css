@@ -1,0 +1,23 @@
+.header{
+    background-color: lightblue;
+    min-height: 150px;
+}
+
+a{
+    color: black;
+}
+
+.secondDiv{
+    min-height: 200px;
+    background-color: lightgray;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.main2{
+    margin-right: 80px;
+    margin-left: 80px;
+    overflow: hidden;
+    
+}
+

@@ -158,6 +158,224 @@ function positiveNumbers(ary)
     return newAry;
 }
 
+function cipher(msg, offset)
+{
+    var msgAry = msg.split('');
+    var msgNums = [];
+    var newMsgAry = [];
+    for(var i = 0; i < msgAry.length; i++)
+    {
+        switch(msgAry[i])
+        {
+            case 'a':
+            case 'A':
+                msgNums.push(1 + offset)
+                break;
+            case 'b':
+            case 'B':
+                msgNums.push(2 + offset)
+                break;
+            case 'c':
+            case 'C':
+                msgNums.push(3 + offset)
+                break;
+            case 'd':
+            case 'D':
+                msgNums.push(4 + offset)
+                break;
+            case 'E':
+            case 'e':
+                msgNums.push(5 + offset)
+                break;
+            case 'f':
+            case 'F':
+                msgNums.push(6 + offset)
+                break;
+            case 'g':
+            case 'G':
+                msgNums.push(7 + offset)
+                break;
+            case 'h':
+            case 'H':
+                msgNums.push(8 + offset)
+                break;
+            case 'i':
+            case 'I':
+                msgNums.push(9 + offset)
+                break;
+            case 'j':
+            case 'J':
+                msgNums.push(10 + offset)
+                break;
+            case 'k':
+            case 'K':
+                msgNums.push(11 + offset)
+                break;
+            case 'l':
+            case 'L':
+                msgNums.push(12 + offset)
+                break;
+            case 'm':
+            case 'M':
+                msgNums.push(13 + offset)
+                break;
+            case 'n':
+            case 'N':
+                msgNums.push(14 + offset)
+                break;
+            case 'o':
+            case 'O':
+                msgNums.push(15 + offset)
+                break;
+            case 'p':
+            case 'P':
+                msgNums.push(16 + offset)
+                break;
+            case 'q':
+            case 'Q':
+                msgNums.push(17 + offset)
+                break;
+            case 'r':
+            case 'R':
+                msgNums.push(18 + offset)
+                break;
+            case 's':
+            case 'S':
+                msgNums.push(19 + offset)
+                break;
+            case 't':
+            case 'T':
+                msgNums.push(20 + offset)
+                break;
+            case 'u':
+            case 'U':
+                msgNums.push(21 + offset)
+                break
+            case 'v':
+            case 'V':
+                msgNums.push(22 + offset)
+                break;
+            case 'w':
+            case 'W':
+                msgNums.push(23 + offset)
+                break;
+            case 'x':
+            case 'X':
+                msgNums.push(24 + offset)
+                break;
+            case 'y':
+            case 'Y':
+                msgNums.push(25 + offset)
+                break;
+            case 'z':
+            case 'Z':
+                msgNums.push(26 + offset)
+                break;
+            default:
+                msgNums.push(0);
+                break;
+        }
+    }
+    console.log(msgNums);
+    for(var i = 0; i < msgNums.length; i++)
+    {
+        if (msgNums[i] > 26)
+        {
+            msgNums[i] = msgNums[i] - 26;
+        }
+    }
+    for(var i = 0; i < msgAry.length; i++)
+    {
+        switch(msgNums[i])
+        {
+            case 0:
+                newMsgAry.push(' ');
+                break;
+            case 1:
+                newMsgAry.push('a');
+                break;
+            case 2:
+                newMsgAry.push('b');
+                break;
+            case 3:
+                newMsgAry.push('c');   
+                break;
+            case 4:
+                newMsgAry.push('d');
+                break;
+            case 5:
+                newMsgAry.push('e');
+                break;
+            case 6:
+                newMsgAry.push('f');
+                break;
+            case 7:
+                newMsgAry.push('g');
+                break;
+            case 8:
+                newMsgAry.push('h');
+                break;
+            case 9:
+                newMsgAry.push('i');
+                break;
+            case 10:
+                newMsgAry.push('j');
+                break;
+            case 11:
+                newMsgAry.push('k');
+                break;
+            case 12:
+                newMsgAry.push('l');
+                break;
+            case 13:
+                newMsgAry.push('m');
+                break;
+            case 14:
+                newMsgAry.push('n');
+                break;
+            case 15:
+                newMsgAry.push('o');
+                break;
+            case 16:
+                newMsgAry.push('p');
+                break;
+            case 17:
+                newMsgAry.push('q');
+                break;
+            case 18:
+                newMsgAry.push('r');
+                break;
+            case 19:
+                newMsgAry.push('s');
+                break;
+            case 20:
+                newMsgAry.push('t');
+                break;
+            case 21:
+                newMsgAry.push('u');
+                break;
+            case 22:
+                newMsgAry.push('v');
+                break;
+            case 23:
+                newMsgAry.push('w');
+                break;
+            case 24:
+                newMsgAry.push('x');
+                break;
+            case 25:
+                newMsgAry.push('y');
+                break;
+            case 26:
+                newMsgAry.push('z');
+                break;
+        }
+        console.log(newMsgAry);
+        var newMsg = newMsgAry.join('');
+        return newMsg;
+    }
+}
+
 function main()
 {
     // console.log(madlib('matt', 'math'));
@@ -175,7 +393,8 @@ function main()
     // console.log(longLongVowels('Cheese'));
     // console.log(longLongVowels('Good'));
     // console.log(longLongVowels('Man'));
-    console.log(positiveNumbers([1, -3, 5, -3, 0]));
+    // console.log(positiveNumbers([1, -3, 5, -3, 0]));
+    console.log(cipher('Genius without education is like silver in the mine', 13));
 }
 
 
