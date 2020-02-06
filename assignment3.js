@@ -24,8 +24,14 @@ var cities = [
     { name: 'New York', temperature: 80.0 } 
     ];
 
-    var newCities = cities.filter(function(element){
-        return element.temperature < 70.0;
+    // let newCities = cities.filter(function(element){
+    //     return element.temperature < 70.0;
+    // })
+
+    // console.log(newCities);
+
+    let cityNames = cities.map(function(element){
+        return element.name;
     })
 
-    console.log(newCities);
+    console.log(cityNames);
