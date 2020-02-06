@@ -17,21 +17,27 @@
 
 // console.log(squareAry);
 
-var cities = [
-    { name: 'Los Angeles', temperature: 60.0},
-    { name: 'Atlanta', temperature: 52.0 },
-    { name: 'Detroit', temperature: 48.0 },
-    { name: 'New York', temperature: 80.0 } 
-    ];
+// var cities = [
+//     { name: 'Los Angeles', temperature: 60.0},
+//     { name: 'Atlanta', temperature: 52.0 },
+//     { name: 'Detroit', temperature: 48.0 },
+//     { name: 'New York', temperature: 80.0 } 
+//     ];
 
-    // let newCities = cities.filter(function(element){
-    //     return element.temperature < 70.0;
-    // })
+// let newCities = cities.filter(function(element){
+//     return element.temperature < 70.0;
+// })
 
-    // console.log(newCities);
+// console.log(newCities);
 
-    let cityNames = cities.map(function(element){
-        return element.name;
-    })
+// let cityNames = cities.map(function(element){
+//     return element.name;
+// })
 
-    console.log(cityNames);
+// console.log(cityNames);
+
+let people = [ 'Dom', 'Lyn', 'Kirk', 'Autumn', 'Trista', 'Jesslyn', 'Kevin', 'John', 'Eli', 'Juan', 'Robert', 'Keyur', 'Jason', 'Che', 'Ben' ];
+
+people.forEach(function(element){
+    console.log('Good Job ' + element);
+})
